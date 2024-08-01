@@ -52,6 +52,9 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
+    colorMode: {
+      defaultMode: 'dark',
+    },
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'ConOps',
@@ -81,53 +84,33 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
       links: [
         {
           title: 'Docs',
           items: [
-            {
-              label: 'AWS',
-              to: '/docs/aws/intro',
-            },
-            {
-              label: 'DevOps',
-              to: '/docs/devops/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
+            { label: 'AWS', to: '/docs/aws/intro' },
+            { label: 'DevOps', to: '/docs/devops/intro' },
+          ]
         },
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
+            { label: 'Blog', to: '/blog' },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
+              href: 'https://github.com/connorSand/connor-docusaurus'
+            }
+          ]
         },
+        {
+          title: 'Certifications',
+          items: [
+            { label: 'AWS Solutions Architect - Associate (Soon)', to: '#' }, 
+            { label: 'Terraform Certification', href: 'https://www.credly.com/badges/7f6be4e1-b0e0-4b87-9bed-5f412bbd5e73' }
+          ]
+        }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} ConOps, Built with Docusaurus.`,
+      copyright: 'Copyright © 2024 ConOps, Built with Docusaurus.'
     },
     prism: {
       theme: prismThemes.github,

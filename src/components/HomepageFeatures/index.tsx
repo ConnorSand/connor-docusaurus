@@ -38,7 +38,7 @@ const FeatureList: FeatureItem[] = [
         Blogging my Cloud Battles.
       </>
     ),
-    baseHref: '/', 
+    baseHref: '/blog', 
   },
 ];
 
