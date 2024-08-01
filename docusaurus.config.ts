@@ -3,9 +3,9 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: 'ConOps',
+  tagline: '',
+  favicon: 'img/conops.svg',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -15,8 +15,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'connorSand', // Usually your GitHub org/user name.
+  projectName: 'connor-docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -62,13 +62,19 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'awsSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'AWS',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'devopsSidebar',
+          position: 'left',
+          label: 'DevOps',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/connorSand/connor-docusaurus',
           label: 'GitHub',
           position: 'right',
         },
@@ -81,8 +87,12 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'AWS',
+              to: '/docs/aws/intro',
+            },
+            {
+              label: 'DevOps',
+              to: '/docs/devops/intro',
             },
           ],
         },
@@ -117,7 +127,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} ConOps, Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

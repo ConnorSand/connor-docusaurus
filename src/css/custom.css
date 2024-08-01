@@ -30,8 +30,6 @@
 }
 
 #shine {
-  color: #FFA500; /* Dark grey text color */
-  /* text-shadow: 0 0 5px #FFA500; Orangy glow around the text */
+  color: #FFA500; 
   font-weight: bold;
-
 }

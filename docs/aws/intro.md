@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
+slug: intro
 ---
 
-# Create a Page
+# AWS Intro
 
 Add **Markdown or React** files to `src/pages` to create a **standalone page**:
 

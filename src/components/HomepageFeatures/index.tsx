@@ -6,6 +6,7 @@ type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
   description: JSX.Element;
+  baseHref: string;
 };
 
 const FeatureList: FeatureItem[] = [
@@ -14,35 +15,43 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/aws_orange.svg').default,
     description: (
       <>
-        AWS Cloud Engineering Insights
+        AWS Insights
       </>
     ),
+    baseHref: 'docs/aws/intro',
   },
   {
     title: 'DevOps',
     Svg: require('@site/static/img/dev.svg').default,
     description: (
       <>
-        DevOps implementations
+        DevOps Learnings
       </>
     ),
+    baseHref: 'docs/devops/intro',
   },
   {
     title: 'Blog',
     Svg: require('@site/static/img/blog.svg').default,
     description: (
       <>
-        Blogging my cloud battles and learnings.
+        Blogging my Cloud Battles.
       </>
     ),
+    baseHref: '/', 
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description, baseHref }: FeatureItem) {
+  // Construct the href based on the title and whether it's a documentation link
+  const href = `${baseHref}`;
+
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <a href={href} className={styles.featureLink}>
+          <Svg className={`${styles.featureSvg} ${styles.hoverEffect}`} role="img" />
+        </a>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
