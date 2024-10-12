@@ -4,16 +4,11 @@ import MDXComponents from '@theme-original/MDXComponents';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
-library.add(fab);
-
-interface CustomMDXComponents extends Record<string, React.ComponentType<any>> {
-  FAIcon: typeof FontAwesomeIcon;
-}
-
-const customMDXComponents: CustomMDXComponents = {
+library.add(fab, fas);
+export default {
+  // Re-use the default mapping
   ...MDXComponents,
-  FAIcon: FontAwesomeIcon,
+  FAIcon: FontAwesomeIcon, // Make the FontAwesomeIcon component available in MDX as <icon />.
 };
-
-export default customMDXComponents;

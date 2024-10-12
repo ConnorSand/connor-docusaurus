@@ -1,29 +1,23 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'ConOps',
-  tagline: '',
+  tagline: 'Your personal tagline here',
   favicon: 'img/conops.svg',
-
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://conops.io', // Change this to your actual domain
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: 'connorSand', // Usually your GitHub org/user name.
   projectName: 'connor-docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -33,29 +27,23 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          editUrl:
-            'https://github.com/connorSand/connor-docusaurus/',
-        },
+        docs: false,
         blog: {
+          routeBasePath: '/',
           showReadingTime: true,
           editUrl:
             'https://github.com/connorSand/connor-docusaurus/',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: ['./src/css/custom.css'],
         },
       } satisfies Preset.Options,
     ],
   ],
-
   themeConfig: {
-    // Replace with your project's social card
     colorMode: {
       defaultMode: 'dark',
     },
-    image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'ConOps',
       logo: {
@@ -63,19 +51,6 @@ const config: Config = {
         src: 'img/ConOps.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'awsSidebar',
-          position: 'left',
-          label: 'AWS',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'devopsSidebar',
-          position: 'left',
-          label: 'DevOps',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/connorSand/connor-docusaurus',
           label: 'GitHub',
@@ -86,31 +61,30 @@ const config: Config = {
     footer: {
       links: [
         {
-          title: 'Docs',
-          items: [
-            { label: 'AWS', to: '/docs/aws/intro' },
-            { label: 'DevOps', to: '/docs/devops/intro' },
-          ]
-        },
-        {
-          title: 'More',
-          items: [
-            { label: 'Blog', to: '/blog' },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/connorSand/connor-docusaurus'
-            }
-          ]
-        },
-        {
           title: 'Certifications',
           items: [
-            { label: 'AWS Solutions Architect - Associate (Soon)', to: '#' }, 
-            { label: 'Terraform Certification', href: 'https://www.credly.com/badges/7f6be4e1-b0e0-4b87-9bed-5f412bbd5e73' }
-          ]
+            {
+              html: `
+                <div class="certification-container">
+                  <a href="https://www.credly.com/badges/deb2a12a-1d33-446a-aff3-dabd7b50656a" target="_blank" rel="noreferrer noopener" aria-label="AWS Solutions Architect">
+                    <img src="img/aws_solutions_architect.png" alt="AWS Solutions Architect" class="certification-image" />
+                  </a>
+                </div>
+              `,
+            },
+            {
+              html: `
+                <div class="certification-container">
+                  <a href="https://www.credly.com/badges/7f6be4e1-b0e0-4b87-9bed-5f412bbd5e73" target="_blank" rel="noreferrer noopener" aria-label="Terraform Associate">
+                    <img src="img/terraform.png" alt="Terraform Associate" class="certification-image" />
+                  </a>
+                </div>
+              `,
+            }
+          ],
         }
       ],
-      copyright: 'Copyright © 2024 ConOps, Built with Docusaurus.'
+      copyright: 'Copyright © 2024 Connor, Built with Docusaurus.'
     },
     prism: {
       theme: prismThemes.github,
