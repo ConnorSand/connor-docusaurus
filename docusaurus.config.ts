@@ -42,14 +42,6 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-  customFields: {
-    USE_SSH: 'true',
-    GIT_USER: 'connorSand',
-    GIT_PASS: '',
-    CURRENT_BRANCH: 'main',
-    GIT_USER_NAME: 'user.name',
-    GIT_USER_EMAIL: 'connor.sandeson@outlook.com'
-  },
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',

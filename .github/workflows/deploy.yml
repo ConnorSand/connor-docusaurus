@@ -49,3 +49,12 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        env:
+          USE_SSH: true
+          GIT_USER: ConnorSand
+          GIT_PASS: ${{ secrets.GIT_PASS }}
+          CURRENT_BRANCH: main
+          GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
+          GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
+
+
