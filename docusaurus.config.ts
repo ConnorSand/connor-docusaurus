@@ -3,16 +3,16 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'ConOps',
+  title: 'connor.cloud',
   tagline: 'Your personal tagline here',
-  favicon: 'img/conops.svg',
+  favicon: 'img/Logo.svg',
 
   organizationName: 'ConnorSand',
   projectName: 'connor-docusaurus.github.io',
   deploymentBranch: 'build',
   trailingSlash: false,
 
-  url: 'https://conops.io', // Change this to your actual domain
+  url: 'https://connor.cloud', // Change this to your actual domain
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/connor-docusaurus/',
@@ -47,10 +47,10 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'ConOps',
+      title: 'connor.cloud',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/ConOps.svg',
+        src: 'img/Logo.svg',
       },
       items: [
         {
@@ -82,7 +82,7 @@ const config: Config = {
           ],
         }
       ],
-      copyright: 'Copyright © 2024 Connor, Built with Docusaurus.'
+      copyright: 'Built with Docusaurus.'
     },
     prism: {
       theme: prismThemes.github,
