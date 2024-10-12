@@ -33,8 +33,6 @@ const config: Config = {
         blog: {
           routeBasePath: '/',
           showReadingTime: true,
-          editUrl:
-            'https://github.com/connorSand/connor-docusaurus/',
         },
         theme: {
           customCss: ['./src/css/custom.css'],
