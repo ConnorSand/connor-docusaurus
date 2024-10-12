@@ -6,14 +6,16 @@ const config: Config = {
   title: 'ConOps',
   tagline: 'Your personal tagline here',
   favicon: 'img/conops.svg',
+
+  organizationName: 'ConnorSand',
+  projectName: 'connor-docusaurus.github.io',
+  deploymentBranch: 'build',
+  trailingSlash: false,
+
   url: 'https://conops.io', // Change this to your actual domain
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  organizationName: 'connorSand', // Usually your GitHub org/user name.
-  projectName: 'connor-docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -40,11 +42,19 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+  customFields: {
+    USE_SSH: 'true',
+    GIT_USER: 'connorSand',
+    GIT_PASS: '',
+    CURRENT_BRANCH: 'main',
+    GIT_USER_NAME: 'user.name',
+    GIT_USER_EMAIL: 'connor.sandeson@outlook.com'
+  },
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: false,
-      respectPrefersColorScheme: false,
+      respectPrefersColorScheme: true,
     },
     navbar: {
       title: 'ConOps',
