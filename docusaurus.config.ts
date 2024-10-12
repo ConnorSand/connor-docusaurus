@@ -15,7 +15,7 @@ const config: Config = {
   url: 'https://conops.io', // Change this to your actual domain
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/connor-docusaurus/',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
