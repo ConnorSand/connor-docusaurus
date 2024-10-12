@@ -43,6 +43,8 @@ const config: Config = {
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'ConOps',
@@ -65,20 +67,16 @@ const config: Config = {
           items: [
             {
               html: `
-                <div class="certification-container">
-                  <a href="https://www.credly.com/badges/deb2a12a-1d33-446a-aff3-dabd7b50656a" target="_blank" rel="noreferrer noopener" aria-label="AWS Solutions Architect">
-                    <img src="img/aws_solutions_architect.png" alt="AWS Solutions Architect" class="certification-image" />
-                  </a>
-                </div>
+                <a href="https://www.credly.com/badges/deb2a12a-1d33-446a-aff3-dabd7b50656a" target="_blank" rel="noreferrer noopener" aria-label="AWS Solutions Architect">
+                  <img src="img/aws_solutions_architect.png" alt="AWS Solutions Architect" class="certification-image" />
+                </a>
               `,
             },
             {
               html: `
-                <div class="certification-container">
-                  <a href="https://www.credly.com/badges/7f6be4e1-b0e0-4b87-9bed-5f412bbd5e73" target="_blank" rel="noreferrer noopener" aria-label="Terraform Associate">
-                    <img src="img/terraform.png" alt="Terraform Associate" class="certification-image" />
-                  </a>
-                </div>
+                <a href="https://www.credly.com/badges/7f6be4e1-b0e0-4b87-9bed-5f412bbd5e73" target="_blank" rel="noreferrer noopener" aria-label="Terraform Associate">
+                  <img src="img/terraform.png" alt="Terraform Associate" class="certification-image" />
+                </a>
               `,
             }
           ],
