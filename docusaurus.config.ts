@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'connor.cloud',
   tagline: 'Your personal tagline here',
-  favicon: 'img/aws.svg',
+  favicon: 'img/logo.svg',
 
   organizationName: 'ConnorSand',
   projectName: 'connor-docusaurus.github.io',
@@ -50,7 +50,7 @@ const config: Config = {
       title: 'connor.cloud',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/aws.svg',
+        src: 'img/logo.svg',
       },
       items: [
         {
