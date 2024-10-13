@@ -7,8 +7,12 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
 library.add(fab, fas);
+
+// Import our new LazyFAIcon component
+import LazyFAIcon from '../components/LazyFAIcon';
+
 export default {
   // Re-use the default mapping
   ...MDXComponents,
-  FAIcon: FontAwesomeIcon, // Make the FontAwesomeIcon component available in MDX as <icon />.
+  FAIcon: LazyFAIcon, // Replace FontAwesomeIcon with our LazyFAIcon component
 };
