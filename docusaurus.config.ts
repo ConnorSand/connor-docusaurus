@@ -54,8 +54,8 @@ const config: Config = {
       },
       items: [
         {
-          href: 'https://github.com/connorSand/connor-docusaurus',
-          label: 'GitHub',
+          href: 'https://www.linkedin.com/in/connor-sanderson',
+          label: 'LinkedIn',
           position: 'right',
         },
       ],
